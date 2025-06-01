@@ -1,0 +1,103 @@
+/* Contenedor principal de la lista */
+.list {
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+  background-color: var(--third-color);
+  /* Color de fondo dinámico usando variable */
+  height: fit-content;
+  /* Ajusta la altura al contenido */
+}
+
+/* Tarjeta individual dentro de la lista */
+.list-card {
+  display: flex;
+  /* Usa flexbox para alinear contenido */
+  justify-content: space-between;
+  /* Distribuye elementos a los extremos */
+  align-items: flex-start;
+  /* Alinea contenido al inicio verticalmente */
+  padding: 1rem;
+  /* Espaciado interno */
+  border: 1px solid #ccc;
+  /* Borde gris claro */
+  border-radius: 0.5rem;
+  /* Bordes redondeados */
+  margin-bottom: 1rem;
+  /* Espacio entre tarjetas */
+  background-color: #fff;
+  /* Fondo blanco */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.list-card:hover {
+  background-color: var(--background-color);
+  /* Cambia a color dinámico */
+}
+
+/* Contenedor del contenido de la tarjeta */
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  /* Permite que el contenido baje en pantallas pequeñas */
+}
+
+/* Información principal de la tarjeta */
+.card-info {
+  flex: 1;
+  /* Ocupa todo el espacio disponible */
+  min-width: 200px;
+  /* Asegura un ancho mínimo */
+}
+
+/* Contenedor de los botones (acciones) */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  /* Apila los botones verticalmente */
+  gap: 0.5rem;
+  /* Espacio entre botones */
+  align-items: flex-end;
+  /* Alinea los botones a la derecha */
+}
+
+/* Botones de editar y eliminar */
+.edit-btn,
+.delete-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.5);
+  /* Aumenta tamaño al pasar el cursor */
+}
+
+
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 600px) {
+  .list-card {
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    align-items: stretch;
+    /* Estira los elementos al ancho completo */
+  }
+
+  .card-content {
+    flex-direction: column;
+    /* Apila el contenido */
+    gap: 1rem;
+  }
+
+  .card-actions {
+    flex-direction: row;
+    /* Muestra los botones en fila horizontal */
+    justify-content: flex-end;
+  }
+}

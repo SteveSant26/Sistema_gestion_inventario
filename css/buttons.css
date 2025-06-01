@@ -1,0 +1,22 @@
+.primary-btn {
+    background-color: var(--primary-btn-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    text-decoration: none;
+
+
+}
+
+.primary-btn:hover {
+    background-color: var(--secondary-btn-color);
+}
+
+
+.btn-group {
+  text-align: left;
+}

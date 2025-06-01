@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Computadora HP",
+    "categoryId": 1,
+    "courseId": 101,
+    "status": "Disponible",
+    "arrivalDate": "2024-01-15",
+    "quantity": 5
+  },
+  {
+    "id": 2,
+    "name": "Proyector Epson",
+    "categoryId": 2,
+    "courseId": 102,
+    "status": "En uso",
+    "arrivalDate": "2024-02-10",
+    "quantity": 2
+  },
+  {
+    "id": 3,
+    "name": "Impresora Canon",
+    "categoryId": 3,
+    "courseId": 101,
+    "status": "Mantenimiento",
+    "arrivalDate": "2024-03-05",
+    "quantity": 3
+  },
+  {
+    "id": 4,
+    "name": "Monitor Samsung",
+    "categoryId": 4,
+    "courseId": 101,
+    "status": "Disponible",
+    "arrivalDate": "2024-01-20",
+    "quantity": 8
+  },
+  {
+    "id": 5,
+    "name": "Teclado Logitech",
+    "categoryId": 5,
+    "courseId": 101,
+    "status": "Disponible",
+    "arrivalDate": "2024-02-15",
+    "quantity": 12
+  },
+  {
+    "id": 6,
+    "name": "Mouse Genius",
+    "categoryId": 6,
+    "courseId": 101,
+    "status": "Disponible",
+    "arrivalDate": "2024-02-15",
+    "quantity": 15
+  }
+]

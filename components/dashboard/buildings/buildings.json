@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Facultad de Ingeniería",
+    "location": "Calle Técnica 45, Zona Norte",
+    "floors": 6,
+    "capacity": 750
+  },
+  {
+    "id": 2,
+    "name": "Facultad de Ciencias",
+    "location": "Carrera 10 No. 45-67, Campus Científico",
+    "floors": 5,
+    "capacity": 600
+  },
+  {
+    "id": 3,
+    "name": "Facultad de Humanidades",
+    "location": "Avenida Cultura 101, Campus Central",
+    "floors": 4,
+    "capacity": 400
+  },
+  {
+    "id": 4,
+    "name": "Facultad de Derecho",
+    "location": "Av. Justicia 12, Ciudad Universitaria",
+    "floors": 3,
+    "capacity": 350
+  },
+  {
+    "id": 5,
+    "name": "Facultad de Medicina",
+    "location": "Clínica Universitaria, Calle Salud 89",
+    "floors": 5,
+    "capacity": 500
+  }
+]

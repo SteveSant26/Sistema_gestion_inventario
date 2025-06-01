@@ -1,0 +1,177 @@
+.sidebar-container {
+  position: relative;
+}
+
+/* Sidebar principal (versión escritorio) */
+.sidebar {
+  width: 300px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  box-shadow: 2px 0 10px #0000001a;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Área que contiene los enlaces del menú */
+.sidebar-content {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+/* Estilo de cada opción del menú */
+.menu-item {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  color: var(--gray-color);
+  text-align: left;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  position: relative;
+  transition: all 0.3s ease;
+
+  /* Animación de aparición al cargar */
+  opacity: 0;
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Efecto al hacer hover sobre un ítem */
+.menu-item:hover {
+  background-color: var(--higlight-color);
+  color: var(--white-color);
+  padding-left: 25px; /* efecto de desplazamiento sutil */
+}
+
+/* Línea vertical al lado izquierdo al hacer hover o estar activo */
+.menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--secondary-btn-color);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover::before,
+.menu-item.active::before {
+  transform: scaleY(1);
+}
+
+/* Estado activo (ítem seleccionado) */
+.menu-item.active {
+  background-color: var(--higlight-color);
+  color: var(--white-color);
+}
+
+.menu-item.active:hover {
+  background-color: var(--primary-color);
+}
+
+/* Retrasos en animación para cada ítem */
+.menu-item:nth-child(1) { animation-delay: 0.1s; }
+.menu-item:nth-child(2) { animation-delay: 0.2s; }
+.menu-item:nth-child(3) { animation-delay: 0.3s; }
+.menu-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* Tabs superiores (solo móviles) */
+.top-tabs {
+  display: none;
+  width: 100%;
+}
+
+.tab-item {
+  position: relative;
+  padding: 15px 15px;
+  background-color: var(--secondary-color);
+  color: var(--gray-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tab-item:hover {
+  background-color: var(--higlight-color);
+  color: var(--white-color);
+}
+
+.tab-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--secondary-btn-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.tab-item:hover::before,
+.tab-item.active::before {
+  transform: scaleX(1);
+}
+
+.tab-item.active {
+  background-color: var(--higlight-color);
+  color: var(--white-color);
+}
+
+.tab-item.active:hover {
+  background-color: var(--primary-color);
+}
+
+/* Animación de entrada lateral para ítems del menú */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =================== Responsive =================== */
+@media (max-width: 768px) {
+  /* Sidebar oculto por defecto en móvil */
+  .sidebar {
+    transform: translateX(-100%);
+    z-index: 1000;
+    width: 200px;
+    height: 100%;
+    display: none; /* Solo se muestra si se activa con clase .active */
+  }
+
+  /* Se muestra cuando se le agrega la clase 'active' desde JS */
+  .sidebar.active {
+    transform: translateX(0);
+    display: flex;
+  }
+
+  /* Tabs superiores visibles solo en móvil */
+  .top-tabs {
+    display: flex;
+    box-shadow: 0 2px 10px #0000001a;
+  }
+}

@@ -1,0 +1,60 @@
+/* Contenedor central del mensaje de error */
+.error-container {
+  max-width: 500px;
+  margin: 100px auto;
+  background-color: var(--red-background-color);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Número 404 grande */
+.error-container h1 {
+  font-size: 6rem;
+  color: var(--secondary-btn-color);
+}
+
+/* Mensaje debajo del número */
+.error-container p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+/* Botón para volver al inicio */
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-btn-color);
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover */
+.home-button:hover {
+  background-color: var(--secondary-btn-color);
+}
+
+/* 🔁 Responsive: para pantallas pequeñas */
+@media (max-width: 600px) {
+  .error-container {
+    margin: 50px 20px;
+    padding: 30px 20px;
+  }
+
+  .error-container h1 {
+    font-size: 4rem;
+  }
+
+  .error-container p {
+    font-size: 1rem;
+  }
+
+  .home-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+}

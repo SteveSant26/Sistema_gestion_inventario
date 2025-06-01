@@ -1,0 +1,55 @@
+<!-- Enlace al archivo CSS específico para la sección de cursos -->
+<link rel="stylesheet" href="/components/dashboard/courses/courses.css">
+
+<!-- Formulario para agregar un nuevo curso -->
+<form class="form-container form-courses" method="post">
+    <!-- Título del formulario -->
+    <h2 class="header-section dashboard-header">Agregar curso</h2>
+
+    <div class="form-body">
+        <!-- Mensaje de error que se muestra si hay problemas con el formulario -->
+        <p class="error-message"></p>
+
+        <!-- Campo para ingresar el ID del curso (tipo numérico) -->
+        <div class="form-group">
+            <input class="form-input" type="number" id="courseId" placeholder="ID del curso" required>
+        </div>
+
+        <!-- Campo para ingresar el nombre del curso -->
+        <div class="form-group">
+            <input class="form-input" type="text" id="courseName" placeholder="Nombre del curso" required>
+        </div>
+
+        <!-- Campo para ingresar la capacidad del curso -->
+        <div class="form-group">
+            <!-- SUGERENCIA: se recomienda cambiar el type="text" por type="number" -->
+            <input class="form-input" type="text" id="courseCapacity" placeholder="Capacidad del curso" required />
+        </div>
+
+        <!-- Selector desplegable para elegir el edificio al que pertenece el curso -->
+        <div class="form-group">
+            <select class="form-input" id="buildingIdSelect" required>
+                <!-- Opción por defecto -->
+                <option value="">Seleccione un edificio</option>
+            </select>
+        </div>
+
+        <!-- Botón para agregar el curso. Ejecuta la función addCourse() del archivo JS -->
+        <button class="primary-btn" id="addCourseBtn" type="submit">Agregar curso</button>
+    </div>
+</form>
+
+<!-- Sección donde se mostrará la lista de cursos existentes -->
+<div class="list">
+    <!-- Título de la sección -->
+    <h2 class="header-section dashboard-header">Lista de cursos</h2>
+
+    <!-- Mensaje de error que se muestra si no hay cursos -->
+    <p class="error-message"></p>
+
+    <!-- Contenedor donde se insertarán dinámicamente las tarjetas de cursos -->
+    <div id="containerCourses"></div>
+</div>
+
+<!-- Enlace al archivo JavaScript principal que maneja toda la lógica -->
+<script type="module" src="/components/dashboard/courses/courses.js"></script>

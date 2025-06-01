@@ -1,0 +1,20 @@
+.form-container {
+  height: fit-content;
+  background: var(--third-color);
+  box-shadow: 0 .5rem 1rem rgb(0 0 0 / .15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: .5rem;
+  
+}
+
+.form-body {
+  padding: 10px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+

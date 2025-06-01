@@ -1,0 +1,33 @@
+<!-- Enlaza la hoja de estilos para la página de login -->
+<link rel="stylesheet" href="/pages/login/login.css">
+
+<div class="login-container form-container">
+    <div class="header-section">
+        <!-- Muestra el logo de la ULEAM -->
+        <img src="/assets/logo_uleam_full_color.png" alt="">
+    </div>
+    <form method="post">
+        <!-- Aquí se mostrarán mensajes de error -->
+        <p class="error-message"></p>
+        <div class="form-body">
+
+            <div class="form-group">
+                <!-- Campo para ingresar el correo electrónico del usuario -->
+                <input class="form-input" type="email" id="email" name="email" placeholder="Username"
+                    autocomplete="email" required />
+            </div>
+            <div class="form-group">
+                <!-- Campo para ingresar la contraseña del usuario -->
+                <input class="form-input" type="password" id="password" name="password" placeholder="Password"
+                    autocomplete="email" required />
+            </div>
+            <div class="btn-group">
+                <!-- Botón para enviar el formulario de login -->
+                <button type="submit" id="loginBtn" class="primary-btn">Login</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Enlaza el archivo JavaScript para la funcionalidad del login -->
+    <script type="module" src="/pages/login/login.js"></script>
+</div>

@@ -1,0 +1,30 @@
+<!-- Vincula los estilos del sidebar -->
+<link rel="stylesheet" href="/components/sidebar/sidebar.css">
+
+<div class="sidebar-container">
+
+    <!-- Navegación superior, útil para accesos rápidos -->
+    <div class="top-tabs" id="top-tabs">
+        <a href="#/dashboard/buildings" class="tab-item">Edificios</a>
+        <a href="#/dashboard/courses" class="tab-item">Cursos</a>
+        <a href="#/dashboard/categories" class="tab-item">Categorías</a>
+        <a href="#/dashboard/properties" class="tab-item">Inmuebles</a>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Panel Admin</h2>
+        </div>
+
+        <!-- Menú principal de administración -->
+        <div class="sidebar-content">
+            <a href="#/dashboard/buildings" class="menu-item">Administrar edificios</a>
+            <a href="#/dashboard/courses" class="menu-item">Administrar cursos</a>
+            <a href="#/dashboard/categories" class="menu-item">Administrar categoría</a>
+            <a href="#/dashboard/properties" class="menu-item">Administrar inmueble</a>
+        </div>
+    </aside>
+</div>
+
+<!-- Lógica del sidebar (ocultar/mostrar, eventos, etc.) -->
+<script type="module" src="/components/sidebar/sidebar.js"></script>

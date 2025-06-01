@@ -1,0 +1,62 @@
+<!-- Vincula el archivo CSS específico para los edificios -->
+<link rel="stylesheet" href="/components/dashboard/buildings/buildings.css">
+
+<!-- Sección del formulario para agregar edificios -->
+<form class="form-container form-buildings" method="post">
+  <!-- Título del formulario -->
+  <h2 class="header-section dashboard-header">Agregar edificio</h2>
+
+  <!-- Contenedor del cuerpo del formulario -->
+  <div class="form-body">
+    <!-- Elemento para mostrar mensajes de error -->
+    <p class="error-message"></p>
+
+    <!-- Campo: ID del edificio -->
+    <div class="form-group">
+      <input class="form-input" type="number" id="buildingId" name="productName" placeholder="Id del edificio" min="0"
+        required>
+    </div>
+
+    <!-- Campo: Nombre del edificio -->
+    <div class="form-group">
+      <input class="form-input" type="text" id="buildingName" name="buildingName" placeholder="Nombre del edificio"
+        required>
+    </div>
+
+    <!-- Campo: Ubicación del edificio -->
+    <div class="form-group">
+      <input class="form-input" type="text" id="buildingLocation" name="buildingLocation"
+        placeholder="Ubicación del edificio" required>
+    </div>
+
+    <!-- Campo: Pisos del edificio (debería ser number en lugar de text) -->
+    <div class="form-group">
+      <input class="form-input" type="number" id="buildingFloors" name="buildingFloors" min="0"
+        placeholder="Pisos del edificio" required>
+    </div>
+
+    <!-- Campo: Capacidad del edificio (debería ser number en lugar de text) -->
+    <div class="form-group">
+      <input class="form-input" type="number" id="buildingCapacity" name="buildingCapacity" min="0"
+        placeholder="Capacidad del edificio" required>
+    </div>
+
+    <!-- Botón para enviar el formulario y agregar el edificio -->
+    <button class="primary-btn" id="addBuildingBtn" type="submit">Agregar edificio</button>
+  </div>
+</form>
+
+<!-- Sección para mostrar la lista de edificios agregados -->
+<div class="list">
+  <h2 class="header-section dashboard-header">Lista de edificios</h2>
+
+  <!-- Mensaje de error para esta sección (por ejemplo, si no hay edificios) -->
+  <p class="error-message"></p>
+
+  <!-- Contenedor dinámico donde se insertarán las tarjetas de edificios -->
+  <div id="containerBuildings">
+  </div>
+</div>
+
+<!-- Importa el script principal de JavaScript que controla esta vista -->
+<script type="module" src="/components/dashboard/buildings/buildings.js"></script>

@@ -1,0 +1,22 @@
+.login-container {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 500px; /* Máximo 500px de ancho */
+  margin: 5vh auto; /* Centrado vertical y horizontal */
+  padding: 2rem; /* Espaciado interno */
+  background-color: var(--white-color); /* Fondo blanco */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    margin: 5vh 20px; /* Menos margen lateral */
+    padding: 1.5rem; /* Menos padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-container {
+    padding: 1rem; /* Padding mínimo */
+  }
+}

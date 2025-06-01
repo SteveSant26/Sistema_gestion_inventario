@@ -1,0 +1,62 @@
+  [
+    {
+      "id": 1,
+      "name": "Residencial",
+      "description": "Inmuebles destinados a vivienda familiar o personal."
+    },
+    {
+      "id": 2,
+      "name": "Comercial",
+      "description": "Inmuebles usados para negocios, tiendas, oficinas, etc."
+    },
+    {
+      "id": 3,
+      "name": "Industrial",
+      "description": "Propiedades para manufactura, fábricas o almacenamiento."
+    },
+    {
+      "id": 4,
+      "name": "Educativo",
+      "description": "Edificios como escuelas, universidades y centros de estudio."
+    },
+    {
+      "id": 5,
+      "name": "Recreativo",
+      "description": "Instalaciones de entretenimiento, deportes o esparcimiento."
+    },
+    {
+      "id": 6,
+      "name": "Tecnologico",
+      "description": "Instalaciones de computadoras, impresoras, etc."
+    },
+    {
+      "id": 7,
+      "name": "Salud",
+      "description": "Hospitales, clínicas, laboratorios y centros médicos."
+    },
+    {
+      "id": 8,
+      "name": "Transporte",
+      "description": "Estaciones, terminales, garajes y almacenes de vehículos."
+    },
+    {
+      "id": 9,
+      "name": "Agrícola",
+      "description": "Terrenos y edificaciones para actividades agrícolas o ganaderas."
+    },
+    {
+      "id": 10,
+      "name": "Religioso",
+      "description": "Iglesias, templos y lugares de culto."
+    },
+    {
+      "id": 11,
+      "name": "Gubernamental",
+      "description": "Edificios de oficinas públicas y administración estatal."
+    },
+    {
+      "id": 12,
+      "name": "Turístico",
+      "description": "Hoteles, hostales, resorts y centros turísticos."
+    }
+  ]

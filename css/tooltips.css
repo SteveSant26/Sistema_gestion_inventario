@@ -1,0 +1,74 @@
+/* Estilos base para tooltips nativos */
+.course-name-tooltip,
+.category-name-tooltip,
+.building-name-tooltip {
+    position: relative;
+    cursor: help;
+    text-decoration: none;
+    border-bottom: 2px dotted currentColor;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.course-name-tooltip:hover,
+.category-name-tooltip:hover,
+.building-name-tooltip:hover {
+    text-shadow: 0 0 8px currentColor;
+    transform: translateY(-2px);
+}
+
+/* === TOOLTIP PARA CURSOS === */
+.course-name-tooltip {
+    color: var(--gray-color);
+    border-bottom-color: var(--gray-color);
+}
+
+.course-name-tooltip:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    text-shadow: 0 0 12px rgba(106, 115, 123, 0.6);
+}
+
+/* === TOOLTIP PARA CATEGORÍAS === */
+.category-name-tooltip {
+    color: var(--secondary-btn-color);
+    border-bottom-color: var(--secondary-btn-color);
+}
+
+.category-name-tooltip:hover {
+    color: var(--secondary-btn-color);
+    border-bottom-color: var(--secondary-btn-color);
+    text-shadow: 0 0 12px rgba(236, 50, 55, 0.6);
+    opacity: 0.8;
+}
+
+/* === TOOLTIP PARA EDIFICIOS === */
+.building-name-tooltip {
+    color: var(--primary-btn-color);
+    border-bottom-color: var(--primary-btn-color);
+}
+
+.building-name-tooltip:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    text-shadow: 0 0 12px rgba(44, 44, 44, 0.6);
+}
+
+/* Estados de focus para accesibilidad */
+.course-name-tooltip:focus,
+.category-name-tooltip:focus,
+.building-name-tooltip:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .course-name-tooltip,
+    .category-name-tooltip,
+    .building-name-tooltip {
+        border-bottom-width: 1px;
+    }
+}
+

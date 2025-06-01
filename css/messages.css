@@ -1,0 +1,21 @@
+/* Mensaje de error oculto por defecto */
+.error-message {
+  background-color: var(--red-background-color);
+  color: #691911;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 0.95rem;
+  display: none; /* Se muestra dinámicamente con JS */
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Responsive: Ajuste de tamaño de fuente en pantallas pequeñas */
+@media (max-width: 600px) {
+  .error-message {
+    font-size: 0.85rem;
+    margin: 0.75rem;
+    padding: 0.75rem;
+  }
+}

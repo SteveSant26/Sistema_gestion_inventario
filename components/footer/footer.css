@@ -1,0 +1,50 @@
+.footer {
+  background-color: var(--primary-color); /* Fondo con el color principal del sistema */
+  border-top: 1px solid var(--highlight-color); /* Línea superior para separación visual */
+  color: var(--white-color); /* Texto en blanco para mejor contraste */
+  display: flex;
+  justify-content: space-between; /* Logo e info distribuidos a los extremos */
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 5vw; /* Espaciado interno proporcional */
+  flex-wrap: wrap; /* Permite que el contenido se adapte si no cabe en línea */
+  min-height: 150px; /* Asegura un mínimo de altura para buena presencia */
+}
+
+.footer-logo img {
+  width: 180px; /* Tamaño fijo del logo */
+  max-width: 100%; /* No desborda el contenedor en pantallas pequeñas */
+  height: auto;
+  display: block;
+}
+
+.footer-info {
+  max-width: 600px; /* Limita el ancho para mantener legibilidad */
+}
+
+.footer-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem; /* Espaciado debajo del título */
+}
+
+.footer-info p {
+  margin: 0;
+  line-height: 1.4; /* Mejora la lectura del texto */
+}
+
+.footer-info p strong {
+  color: var(--secondary-btn-color); /* Destaca la etiqueta como “Correo electrónico” */
+}
+
+/* Versión responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    text-align: center; /* Centra el texto y el logo */
+    padding: 2rem; /* Ajuste de relleno para móviles */
+  }
+
+  .footer-info h2 {
+    font-size: 1rem; /* Reduce el tamaño del texto en títulos */
+  }
+}

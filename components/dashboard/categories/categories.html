@@ -1,0 +1,47 @@
+<!-- Vincula el archivo CSS que da estilos a este módulo de categorías -->
+<link rel="stylesheet" href="/components/dashboard/categories/categories.css">
+
+<!-- Formulario para agregar una nueva categoría -->
+<form class="form-container form-categories" method="post">
+    <!-- Título de la sección del formulario -->
+    <h2 class="header-section dashboard-header">Agregar categoría</h2>
+
+    <div class="form-body">
+        <!-- Contenedor para mensajes de error que se muestran desde JavaScript -->
+        <p class="error-message"></p>
+
+        <!-- Campo para ingresar el ID de la categoría -->
+        <div class="form-group">
+            <input class="form-input" type="number" id="categoryId" min="0" placeholder="ID de la categoría" required>
+        </div>
+
+        <!-- Campo para ingresar el nombre de la categoría -->
+        <div class="form-group">
+            <input class="form-input" type="text" id="categoryName" placeholder="Nombre de la categoría" required>
+        </div>
+
+        <!-- Campo para ingresar la descripción de la categoría -->
+        <div class="form-group">
+            <textarea class="form-input" id="categoryDescription" placeholder="Descripción de la categoría"
+                required></textarea>
+        </div>
+
+        <!-- Botón para agregar la nueva categoría -->
+        <button class="primary-btn" id="addCategoryBtn" type="submit">Agregar categoría</button>
+    </div>
+</form>
+
+<!-- Sección donde se mostrarán las tarjetas de categorías registradas -->
+<div class="list">
+    <!-- Título de la sección de lista -->
+    <h2 class="header-section dashboard-header">Lista de categorías</h2>
+
+    <!-- Contenedor de error general para la lista (como errores al cargar JSON) -->
+    <p class="error-message"></p>
+
+    <!-- Aquí se insertan dinámicamente las tarjetas de categorías desde JavaScript -->
+    <div id="containerCategories"></div>
+</div>
+
+<!-- Importa el script JavaScript que maneja la lógica de esta vista (modular) -->
+<script type="module" src="/components/dashboard/categories/categories.js"></script>

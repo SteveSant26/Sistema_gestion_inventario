@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/components/dashboard/properties/properties.css">
+
+<!-- Formulario para agregar inmuebles -->
+<form class="form-container form-properties" method="post">
+  <h2 class="header-section dashboard-header">Agregar inmueble</h2>
+
+  <div class="form-body">
+    <p class="error-message"></p>
+
+    <div class="form-group">
+      <input class="form-input" type="number" id="propertyId" min="0" placeholder="ID del inmueble" required />
+    </div>
+    
+    <div class="form-group">
+      <input class="form-input" type="text" id="propertyName" placeholder="Nombre del inmueble" required />
+    </div>
+
+    <div class="form-group">
+      <select class="form-input" id="categorySelect" required>
+        <option value="">Seleccione una categoría</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <select class="form-input" id="courseSelect" required>
+        <option value="">Seleccione un curso</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <select class="form-input" id="statusSelect" required>
+        <option value="">Seleccione un estado</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="arrivalDate" class="input-label">Fecha de llegada</label>
+      <input class="form-input " type="date" id="arrivalDate" required />
+    </div>
+
+    <div class="form-group">
+      <input class="form-input" type="number" id="quantity" min="1" placeholder="Cantidad" required />
+    </div>
+
+    <button class="primary-btn" id="addPropertyBtn" type="submit">Agregar inmueble</button>
+  </div>
+</form>
+
+<!-- Lista de inmuebles -->
+<div class="list">
+  <h2 class="header-section dashboard-header">Lista de inmuebles</h2>
+  <p class="error-message"></p>
+  <div id="containerProperties"></div>
+</div>
+
+<script type="module" src="/components/dashboard/properties/properties.js"></script>

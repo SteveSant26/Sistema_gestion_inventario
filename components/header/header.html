@@ -1,0 +1,22 @@
+<!-- Carga de estilos específicos para el header -->
+<link rel="stylesheet" href="/components/header/header.css">
+
+<!-- Barra de navegación fija en la parte superior -->
+<nav class="navbar fixed-top navbar-expand">
+    <!-- Lado izquierdo: logo y botón de inicio -->
+    <div class="navbar-brand">
+        <a href="/">
+            <img src="/assets/favicon.png" alt="Logo">
+        </a>
+        <a class="home-btn" href="/">Home</a>
+    </div>
+
+    <!-- Lado derecho: acciones de autenticación -->
+    <div class="navbar-auth" id="auth-actions">
+        <button id="logout" class="login-btn-nav">Log out</button>
+        <a href="#/login" class="login-btn-nav">Log in</a>
+    </div>
+</nav>
+
+<!-- Script del componente del header -->
+<script type="module" src="/components/header/header.js"></script>
