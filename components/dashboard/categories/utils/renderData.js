@@ -1,7 +1,7 @@
 // Módulo para renderizar los datos de categorías en el DOM
 import { DOM } from "./domElements.js";
 import { createCategoryCard } from "./createCard.js";
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 
 // Función para mostrar todas las categorías en la vista
 export function showCategories(list) {

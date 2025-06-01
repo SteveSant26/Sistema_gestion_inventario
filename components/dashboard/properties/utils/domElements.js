@@ -1,4 +1,4 @@
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 
 export const DOM = {
   addButton: getElement("#addPropertyBtn"),

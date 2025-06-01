@@ -1,6 +1,6 @@
 import { DOM } from "./domElements.js";
 import { createBuildingCard } from "./createCard.js";
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 
 export function showBuildings(list) {
   DOM.container = getElement("#containerBuildings");

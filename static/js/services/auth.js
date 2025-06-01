@@ -10,7 +10,7 @@ export class AuthService {
   async login(email, password) {
     try {
       // Carga la lista de usuarios desde un archivo JSON
-      const users = await fetch("/js/services/users.json").then((res) =>
+      const users = await fetch("/static/js/services/users.json").then((res) =>
         res.json()
       );
 

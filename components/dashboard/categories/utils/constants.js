@@ -1,5 +1,5 @@
 // Configuración de constantes y campos del formulario para categorías
-import { STORAGE_KEYS } from "/js/config/storage-keys.js";
+import { STORAGE_KEYS } from "/static/js/config/storage-keys.js";
 
 // Define los campos del formulario con su selector, tipo y etiqueta
 export const formFields = {

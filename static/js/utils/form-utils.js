@@ -1,5 +1,5 @@
 
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "./get-element.js";
 
 // Extrae los valores de los campos de un formulario basado en un objeto de configuración
 export function getFormData(fields) {

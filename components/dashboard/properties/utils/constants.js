@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from "/js/config/storage-keys.js";
+import { STORAGE_KEYS } from "/static/js/config/storage-keys.js";
 
 export const formFields = {
   id: { selector: "#propertyId", type: "number", label: "ID del inmueble" },

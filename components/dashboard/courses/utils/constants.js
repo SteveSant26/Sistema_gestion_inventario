@@ -1,5 +1,5 @@
 // Configuración de constantes y campos del formulario para cursos
-import { STORAGE_KEYS } from "/js/config/storage-keys.js";
+import { STORAGE_KEYS } from "/static/js/config/storage-keys.js";
 
 // Estructura del formulario, con selectores, tipo de dato y etiquetas
 export const formFields = {

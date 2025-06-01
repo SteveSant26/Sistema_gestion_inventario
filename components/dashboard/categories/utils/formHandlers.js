@@ -5,10 +5,10 @@ import {
   clearForm,
   displayError,
   hideError,
-} from "/js/utils/form-utils.js";
+} from "/static/js/utils/form-utils.js";
 import { formFields, formSelectors } from "./constants.js";
 import { showCategories } from "./renderData.js";
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 import { DOM } from "./domElements.js";
 import { categoriesManager } from "./dataManager.js"; // Importa el singleton
 

@@ -1,5 +1,5 @@
 // Importamos utilidades para manipular elementos del DOM
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 
 // Referencias a elementos del DOM: botón de agregar y mensaje de error
 export const DOM = {

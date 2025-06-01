@@ -1,6 +1,6 @@
 import { DOM } from "./domElements.js";
 import { createCourseCard } from "./createCard.js";
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 import { buildingsManager } from "../../buildings/utils/dataManager.js";
 
 export function showCourses(list) {

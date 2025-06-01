@@ -1,7 +1,7 @@
-import { AuthService } from "/js/services/auth.js"; // Importa el servicio de autenticación
-import { routesConfig } from "/js/config/routes-config.js"; // Importa la configuración de rutas
+import { AuthService } from "/static/js/services/auth.js"; // Importa el servicio de autenticación
+import { routesConfig } from "/static/js/config/routes-config.js"; // Importa la configuración de rutas
 import { renderAuthButton } from "/components/header/header.js"; // Importa función para mostrar el botón de autenticación
-import { getElement } from "/js/utils/get-element.js"; // Importa función para obtener elementos del DOM
+import { getElement } from "/static/js/utils/get-element.js"; // Importa función para obtener elementos del DOM
 
 // Obtiene los elementos del formulario de login
 const emailInput = getElement("email");

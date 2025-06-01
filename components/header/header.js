@@ -1,6 +1,6 @@
-import { AuthService } from "/js/services/auth.js";
-import { routesConfig } from "/js/config/routes-config.js";
-import { getElement } from "/js/utils/get-element.js";
+import { AuthService } from "/static/js/services/auth.js";
+import { routesConfig } from "/static/js/config/routes-config.js";
+import { getElement } from "/static/js/utils/get-element.js";
 
 // Esta función controla qué botón mostrar según el estado de autenticación
 export function renderAuthButton() {

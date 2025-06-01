@@ -1,6 +1,6 @@
 import { DOM } from "./domElements.js";
 import { createPropertyCard } from "./createCard.js";
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 import { coursesManager } from "./../../courses/utils/dataManager.js";
 import { categoriesManager } from "./../../categories/utils/dataManager.js";
 

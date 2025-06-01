@@ -1,5 +1,5 @@
 // Singleton para manejar los datos de inmuebles
-import { loadFromStorage, saveToStorage } from "/js/utils/storage.js";
+import { loadFromStorage, saveToStorage } from "/static/js/utils/storage.js";
 import { STORAGE_KEYS } from "./constants.js";
 
 class PropertiesDataManager {

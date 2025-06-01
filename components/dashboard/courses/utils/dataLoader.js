@@ -1,6 +1,6 @@
 // Módulo para cargar y gestionar los datos de cursos y edificios
 import { showCourses } from "./renderData.js";
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 import { coursesManager } from "./dataManager.js";
 import { buildingsManager } from "../../buildings/utils/dataManager.js";
 

@@ -5,7 +5,7 @@ import {
   hideError,
   clearForm,
   isDuplicate,
-} from "/js/utils/form-utils.js";
+} from "/static/js/utils/form-utils.js";
 import { formFields, formSelectors } from "./constants.js";
 import { DOM } from "./domElements.js";
 import { showProperties } from "./renderData.js";

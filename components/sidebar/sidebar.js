@@ -1,4 +1,4 @@
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "/static/js/utils/get-element.js";
 
 // Espera a que el sidebar esté disponible antes de marcar el ítem activo
 function waitForSidebarAndSetActive() {

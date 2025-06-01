@@ -1,4 +1,4 @@
-import { getElement } from "/js/utils/get-element.js";
+import { getElement } from "./get-element.js";
 
 export async function loadComponent(id, path) {
   try {
