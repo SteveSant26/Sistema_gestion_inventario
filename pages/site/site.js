@@ -1,5 +1,18 @@
 import { loadComponent } from "/static/js/utils/load-component.js";
 
-loadComponent("#sidebar-content-container", "/components/sidebar/sidebar.html");
+import { authService } from "/static/js/services/auth.js";
 
+
+function adjustUIForRole() {
+
+  if (authService.isAdmin()) {
+    document.body.classList.add("admin");
+  } else {
+    document.body.classList.remove("admin");
+  }
+}
+
+
+loadComponent("#sidebar-content-container", "/components/sidebar/sidebar.html");
+adjustUIForRole();
 

@@ -4,3 +4,8 @@
     border-top-right-radius: .5rem;
     color: var(--white-color);
 }
+
+.dashboard-form {
+    width: 100%;
+    max-width: 400px;
+}

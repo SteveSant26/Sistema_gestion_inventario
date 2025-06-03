@@ -1,4 +1,10 @@
+import { authService } from "/static/js/services/auth.js";
+
 export function createBuildingCard(b) {
+  // Determinar si mostrar las acciones
+  const showActions = authService.isAdmin();
+  const actionsStyle = showActions ? 'flex' : 'none';
+  
   return `
     <div class="list-card">
       <div class="card-content">
@@ -9,7 +15,7 @@ export function createBuildingCard(b) {
           <p><strong>Pisos:</strong> ${b.floors}</p>
           <p><strong>Capacidad:</strong> ${b.capacity}</p>
         </div>
-        <div class="card-actions">
+        <div class="card-actions" style="display: ${actionsStyle};">
           <button class="edit-btn" data-id="${b.id}">✏️</button>
           <button class="delete-btn" data-id="${b.id}">🗑️</button>
         </div>

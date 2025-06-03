@@ -1,9 +1,8 @@
-import { AuthService } from "../services/auth.js";
+import { authService } from "../services/auth.js";
 import { routesConfig } from "../config/routes-config.js";
 
 export function guestGuard() {
   // Se crea una instancia del servicio de autenticación
-  const authService = new AuthService();
 
   // Se obtiene la ruta actual del navegador (hash), o se usa "#/" por defecto
   const currentHash = window.location.hash || "#/";

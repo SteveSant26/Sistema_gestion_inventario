@@ -4,7 +4,16 @@
     gap: 2rem;
     padding: 20px;
     margin: 20px;
-    
+
+}
+
+#dashboardForm {
+    display: none;
+}
+
+
+.admin #dashboardForm {
+    display: block;
 }
 
 @media (max-width: 768px) {

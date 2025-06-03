@@ -27,12 +27,13 @@
   margin-bottom: 0.5rem; /* Espaciado debajo del título */
 }
 
-.footer-info p {
+.footer-info a {
   margin: 0;
   line-height: 1.4; /* Mejora la lectura del texto */
+  color: var(--white-color);
 }
 
-.footer-info p strong {
+.footer-info a strong {
   color: var(--secondary-btn-color); /* Destaca la etiqueta como “Correo electrónico” */
 }
 

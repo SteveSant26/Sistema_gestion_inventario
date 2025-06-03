@@ -1,5 +1,9 @@
+import { authService } from "/static/js/services/auth.js";
+
 // Función para crear una tarjeta de curso
 export function createCourseCard(course, buildingsData) {
+  const showActions = authService.isAdmin();
+  const actionsStyle = showActions ? "flex" : "none";
   const building = buildingsData.find((b) => b.id === course.buildingId);
 
   // Crear información del tooltip del edificio
@@ -23,7 +27,7 @@ export function createCourseCard(course, buildingsData) {
           </p>
           <p><strong>Capacidad:</strong> ${course.capacity}</p>
         </div>
-        <div class="card-actions">
+        <div class="card-actions" style="display: ${actionsStyle};">
           <button class="edit-btn" data-id="${course.id}">✏️</button>
           <button class="delete-btn" data-id="${course.id}">🗑️</button>
         </div>

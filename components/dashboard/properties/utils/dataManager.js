@@ -78,7 +78,9 @@ class PropertiesDataManager {
 
   // Verifica si existe un inmueble con el nombre/título dado
   existsByName(name) {
-    return this._propertiesData.some((p) => p.name === name || p.title === name);
+    return this._propertiesData.some(
+      (p) => p.name === name || p.title === name
+    );
   }
 
   // Busca inmuebles por categoría
@@ -110,7 +112,9 @@ class PropertiesDataManager {
   // Carga datos desde JSON
   async loadJson() {
     try {
-      const response = await fetch("/components/dashboard/properties/properties.json");
+      const response = await fetch(
+        "/components/dashboard/properties/properties.json"
+      );
       const propertiesData = await response.json();
       this._propertiesData = propertiesData;
       this.saveToStorage();

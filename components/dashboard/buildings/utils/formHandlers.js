@@ -7,7 +7,7 @@ import {
 } from "/static/js/utils/form-utils.js";
 import { formFields, formSelectors } from "./constants.js";
 import { showBuildings } from "./renderData.js";
-import { DOM } from "./domElements.js";
+import { getBuildingDOM } from "./domElements.js";
 import { getElement } from "/static/js/utils/get-element.js";
 import { buildingsManager } from "./dataManager.js";
 
@@ -18,6 +18,7 @@ export function validateBuildingData(building) {
 }
 
 export function addBuilding(event) {
+  const DOM = getBuildingDOM();
   event.preventDefault();
   hideError(DOM.errorBox);
 

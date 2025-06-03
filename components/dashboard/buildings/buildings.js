@@ -1,5 +1,4 @@
-// Importaciones
-import { DOM } from "./utils/domElements.js";
+import { getBuildingDOM } from "./utils/domElements.js";
 import { loadBuildingsData } from "./utils/dataLoader.js";
 import {
   addBuilding,
@@ -7,25 +6,53 @@ import {
   editBuilding,
 } from "./utils/formHandlers.js";
 
-// Inicializa la vista: carga datos y asocia el evento al botón de agregar
-function init() {
-  loadBuildingsData();
-  DOM.addButton.addEventListener("click", addBuilding);
-}
+let abortController = new AbortController();
 
-// Delegación de eventos para los botones de editar y eliminar dentro del contenedor de edificios
-DOM.container.addEventListener("click", (e) => {
-  const target = e.target.closest("button");
-  if (!target) return;
+function handleContainerClick(e) {
+  const btn = e.target.closest("button");
+  if (!btn) return;
 
-  const id = parseInt(target.dataset.id); // Obtiene el ID del edificio desde el atributo data-id
+  const id = parseInt(btn.dataset.id);
 
-  if (target.classList.contains("delete-btn")) {
+  if (btn.classList.contains("delete-btn")) {
     deleteBuilding(id);
-  } else if (target.classList.contains("edit-btn")) {
+  } else if (btn.classList.contains("edit-btn")) {
     editBuilding(id);
   }
-});
+}
 
-// Llama a la función principal al cargar el script
-init();
+function init() {
+  abortController.abort();
+  abortController = new AbortController();
+
+  loadBuildingsData();
+
+  const DOM = getBuildingDOM(); // ← obtener DOM fresco
+
+  if (DOM.addButton) {
+    DOM.addButton.addEventListener("click", addBuilding, {
+      signal: abortController.signal
+    });
+  }
+
+  if (DOM.container) {
+    DOM.container.addEventListener("click", handleContainerClick, {
+      signal: abortController.signal
+    });
+  }
+
+  if (DOM.form) {
+    DOM.form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      addBuilding(e);
+    }, {
+      signal: abortController.signal
+    });
+  }
+}
+
+window.reinitializeBuildings = init;
+
+setTimeout(() => {
+  init();
+}, 100);

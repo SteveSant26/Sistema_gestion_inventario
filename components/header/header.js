@@ -1,4 +1,4 @@
-import { AuthService } from "/static/js/services/auth.js";
+import { authService } from "/static/js/services/auth.js";
 import { routesConfig } from "/static/js/config/routes-config.js";
 import { getElement } from "/static/js/utils/get-element.js";
 
@@ -15,7 +15,6 @@ export function renderAuthButton() {
     return;
   }
 
-  const authService = new AuthService();
 
   // Si el usuario está autenticado, se muestra el botón de logout
   if (authService.isLoggedIn()) {

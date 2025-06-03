@@ -1,4 +1,4 @@
-import { AuthService } from "/static/js/services/auth.js"; // Importa el servicio de autenticación
+import { authService } from "/static/js/services/auth.js"; // Importa el servicio de autenticación
 import { routesConfig } from "/static/js/config/routes-config.js"; // Importa la configuración de rutas
 import { renderAuthButton } from "/components/header/header.js"; // Importa función para mostrar el botón de autenticación
 import { getElement } from "/static/js/utils/get-element.js"; // Importa función para obtener elementos del DOM
@@ -9,7 +9,6 @@ const passwordInput = getElement("password");
 const errorMessage = getElement(".error-message");
 const loginBtn = getElement("#loginBtn");
 
-const authService = new AuthService(); // Crea una instancia del servicio de autenticación
 
 // Función que maneja el evento de login
 async function handleLogin(event) {

@@ -1,9 +1,19 @@
 import { getElement } from "/static/js/utils/get-element.js";
+import {authService} from "/static/js/services/auth.js";
+import RolesEnum from "/static/js/services/roles-enum.js";
+
+// Personaliza el sidebar según el rol
+function adjustSidebarForRole() {
+  const header = getElement(".sidebar-header h2");
+  header.textContent = authService.isAdmin() ? "Panel Admin" : "Panel Auditor";
+
+}
 
 // Espera a que el sidebar esté disponible antes de marcar el ítem activo
 function waitForSidebarAndSetActive() {
   const sidebar = document.querySelector("#sidebar");
   if (sidebar) {
+    adjustSidebarForRole();
     selectMenuItemByPath(window.location.hash);
   } else {
     // Si aún no existe en el DOM, vuelve a intentar luego

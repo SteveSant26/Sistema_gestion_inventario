@@ -1,6 +1,14 @@
 [
     {
-        "email": "admin@uleam.edu.ec",
-        "password": "123456"
+            "email": "admin@uleam.edu.ec",
+            "password": "123456",
+            "role": "admin"
+    }, 
+    {
+            "email": "auditor@uleam.edu.ec",
+            "password": "123456",
+            "role": "auditor"
     }
+
+
 ]

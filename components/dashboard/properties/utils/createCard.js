@@ -1,6 +1,9 @@
 import { statusColors } from "./constants.js";
+import { authService } from "/static/js/services/auth.js";
 
 export function createPropertyCard(p, coursesData, categoriesData) {
+  const showActions = authService.isAdmin();
+  const actionsStyle = showActions ? "flex" : "none";
   // Crear una tarjeta de propiedad
   const course = coursesData.find((c) => c.id === p.courseId);
   const category = categoriesData.find((cat) => cat.id === p.categoryId);
@@ -56,7 +59,7 @@ export function createPropertyCard(p, coursesData, categoriesData) {
     p.quantity > 1 ? "es" : ""
   }</p>
       </div>
-      <div class="card-actions">
+      <div class="card-actions" style="display: ${actionsStyle};">
         <button class="edit-btn" data-id="${p.id}">✏️</button>
         <button class="delete-btn" data-id="${p.id}">🗑️</button>
       </div>

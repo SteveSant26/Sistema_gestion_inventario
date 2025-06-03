@@ -1,8 +1,6 @@
-<!-- Enlace al archivo CSS específico para la sección de cursos -->
-<link rel="stylesheet" href="/components/dashboard/courses/courses.css">
 
 <!-- Formulario para agregar un nuevo curso -->
-<form class="form-container form-courses" method="post">
+<form class="form-container dashboard-form" method="post" id="dashboardForm">
     <!-- Título del formulario -->
     <h2 class="header-section dashboard-header">Agregar curso</h2>
 
@@ -34,7 +32,6 @@
             </select>
         </div>
 
-        <!-- Botón para agregar el curso. Ejecuta la función addCourse() del archivo JS -->
         <button class="primary-btn" id="addCourseBtn" type="submit">Agregar curso</button>
     </div>
 </form>
@@ -51,5 +48,4 @@
     <div id="containerCourses"></div>
 </div>
 
-<!-- Enlace al archivo JavaScript principal que maneja toda la lógica -->
 <script type="module" src="/components/dashboard/courses/courses.js"></script>
