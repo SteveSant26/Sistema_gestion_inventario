@@ -1,6 +1,8 @@
 import { getElement } from "/static/js/utils/get-element.js";
 
-export const DOM = {
+
+export function getPropertyDOM() {
+  return {
   addButton: getElement("#addPropertyBtn"),
   errorBox: getElement(".error-message"),
   container: getElement("#containerProperties"),
@@ -9,4 +11,5 @@ export const DOM = {
   statusSelect: getElement("#statusSelect"),
   arrivalDate: getElement("#arrivalDate"),
   quantity: getElement("#quantity"),
-};
+  };
+}

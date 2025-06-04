@@ -7,7 +7,7 @@ import {
   isDuplicate,
 } from "/static/js/utils/form-utils.js";
 import { formFields, formSelectors } from "./constants.js";
-import { DOM } from "./domElements.js";
+import { getPropertyDOM } from "./domElements.js";
 import { showProperties } from "./renderData.js";
 import { propertiesManager } from "./dataManager.js";
 
@@ -45,6 +45,7 @@ export function validatePropertyData(property) {
 
 // Agrega un nuevo inmueble
 export function addProperty(e) {
+  const DOM = getPropertyDOM();
   e.preventDefault();
   hideError(DOM.errorBox);
 

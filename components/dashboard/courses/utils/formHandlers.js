@@ -9,7 +9,7 @@ import {
 import { formFields, formSelectors } from "./constants.js";
 import { showCourses } from "./renderData.js";
 import { getElement } from "/static/js/utils/get-element.js";
-import { DOM } from "./domElements.js";
+import { getCourseDOM } from "./domElements.js";
 import { coursesManager } from "./dataManager.js";
 
 // Validación de los datos del curso
@@ -33,6 +33,7 @@ function validateCourseData(course) {
 
 // Agregar curso
 export function addCourse(e) {
+  const DOM = getCourseDOM();
   e.preventDefault();
   hideError(DOM.errorBox);
 

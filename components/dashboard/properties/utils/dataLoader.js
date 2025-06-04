@@ -1,18 +1,14 @@
 import { statusColors } from "./constants.js";
-import { DOM } from "./domElements.js";
+import { getPropertyDOM } from "./domElements.js";
 import { showProperties } from "./renderData.js";
 import { coursesManager } from "./../../courses/utils/dataManager.js";
 import { categoriesManager } from "./../../categories/utils/dataManager.js";
 import { propertiesManager } from "./dataManager.js";
 
-export function loadPropertiesData() {
-  // Cargar categorías desde singleton
+// Cargar categorías en el select
+function loadCategoriesOnSelect(DOM) {
   const categoriesData = categoriesManager.getCategories();
 
-  // Cargar cursos desde singleton
-  const coursesData = coursesManager.getCourses();
-
-  // Llenar select de categorías
   DOM.categorySelect.innerHTML = `<option value="">Seleccione una categoría</option>`;
   categoriesData.forEach((cat) => {
     const option = document.createElement("option");
@@ -20,8 +16,12 @@ export function loadPropertiesData() {
     option.textContent = cat.name;
     DOM.categorySelect.appendChild(option);
   });
+}
 
-  // Llenar select de cursos
+// Cargar cursos en el select
+function loadCoursesOnSelect(DOM) {
+  const coursesData = coursesManager.getCourses();
+
   DOM.courseSelect.innerHTML = `<option value="">Seleccione un curso</option>`;
   coursesData.forEach((c) => {
     const option = document.createElement("option");
@@ -29,8 +29,10 @@ export function loadPropertiesData() {
     option.textContent = c.name;
     DOM.courseSelect.appendChild(option);
   });
+}
 
-  // Llenar select de estados
+// Cargar estados en el select
+function loadStatusOnSelect(DOM) {
   DOM.statusSelect.innerHTML = `<option value="">Seleccione un estado</option>`;
   Object.keys(statusColors).forEach((status) => {
     const option = document.createElement("option");
@@ -38,7 +40,15 @@ export function loadPropertiesData() {
     option.textContent = status;
     DOM.statusSelect.appendChild(option);
   });
+}
 
-  // Mostrar las propiedades cargadas
-  showProperties(propertiesManager.getProperties());  
+// Cargar todos los datos de la vista de propiedades
+export function loadPropertiesData() {
+  const DOM = getPropertyDOM(); // Obtener referencias actualizadas al DOM
+
+  loadCategoriesOnSelect(DOM);
+  loadCoursesOnSelect(DOM);
+  loadStatusOnSelect(DOM);
+
+  showProperties(propertiesManager.getProperties());
 }

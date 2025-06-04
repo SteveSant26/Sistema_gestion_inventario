@@ -9,7 +9,7 @@ import {
 import { formFields, formSelectors } from "./constants.js";
 import { showCategories } from "./renderData.js";
 import { getElement } from "/static/js/utils/get-element.js";
-import { DOM } from "./domElements.js";
+import { getCategoryDOM } from "./domElements.js";
 import { categoriesManager } from "./dataManager.js"; // Importa el singleton
 
 // Validación de datos de categoría
@@ -36,6 +36,7 @@ export function validateCategoryData(category) {
 
 // Agregar categoría
 export function addCategory(event) {
+  const DOM = getCategoryDOM();
   event.preventDefault();
   hideError(DOM.errorBox);
 

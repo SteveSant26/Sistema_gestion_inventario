@@ -1,6 +1,6 @@
 // Archivo principal para inicializar el módulo de cursos
-import { DOM } from "./utils/domElements.js";
-import { loadCoursesAndBuildings } from "./utils/dataLoader.js";
+import { getCourseDOM } from "./utils/domElements.js";
+import { loadCoursesData } from "./utils/dataLoader.js";
 import { addCourse, deleteCourse, editCourse } from "./utils/formHandlers.js";
 
 // Controller para manejar la cancelación de eventos
@@ -21,11 +21,12 @@ function handleContainerClick(e) {
 
 // Inicializa la página: carga los datos y configura los eventos
 function init() {
+  const DOM = getCourseDOM();
   // Cancelar eventos anteriores
   abortController.abort();
   abortController = new AbortController();
   
-  loadCoursesAndBuildings();
+  loadCoursesData();
 
   // Agregar eventos con AbortController
   DOM.addButton.addEventListener("click", addCourse, {

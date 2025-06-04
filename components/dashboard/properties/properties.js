@@ -1,5 +1,5 @@
 import { loadPropertiesData } from "./utils/dataLoader.js";
-import { DOM } from "./utils/domElements.js";
+import { getPropertyDOM } from "./utils/domElements.js";
 import {
   addProperty,
   deleteProperty,
@@ -7,6 +7,8 @@ import {
 } from "./utils/formHandlers.js";
 
 function init() {
+  const DOM = getPropertyDOM();
+  
   loadPropertiesData();
   DOM.addButton.addEventListener("click", addProperty);
 

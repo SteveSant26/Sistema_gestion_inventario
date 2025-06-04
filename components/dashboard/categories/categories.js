@@ -1,5 +1,5 @@
 // Archivo principal para inicializar el módulo de categorías
-import { DOM } from "./utils/domElements.js";
+import { getCategoryDOM } from "./utils/domElements.js";
 import { loadCategories } from "./utils/dataLoader.js";
 import { addCategory, deleteCategory, editCategory } from "./utils/formHandlers.js";
 
@@ -21,6 +21,7 @@ function handleContainerClick(e) {
 
 // Inicializa la vista: carga datos y asocia el evento al botón de agregar
 function init() {
+  const DOM = getCategoryDOM(); // Obtiene los elementos del DOM
   // Cancelar eventos anteriores
   abortController.abort();
   abortController = new AbortController();
